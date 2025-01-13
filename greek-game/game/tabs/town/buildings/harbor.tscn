@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cca16r8gcrh2u"]
+
+[ext_resource type="Script" path="res://game/tabs/town/buildings/harbor.gd" id="1_hj0v1"]
+
+[node name="Harbor" type="Node2D"]
+script = ExtResource("1_hj0v1")

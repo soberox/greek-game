@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwruebh0uj8od"]
+
+[ext_resource type="Script" path="res://game/banner/button_back/top_banner.gd" id="1_nroay"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+size_flags_stretch_ratio = 10.0
+script = ExtResource("1_nroay")
+
+[node name="wood" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.278762, 0.197366, 1.68458e-07, 1)
+
+[node name="labl_wood" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="clay" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.373952, 0.115424, 0.00622071, 1)
+
+[node name="labl_clay" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="wheat" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.639216, 0.470588, 0.286275, 1)
+
+[node name="labl_wheat" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="water" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.0720456, 0.553621, 0.736529, 1)
+
+[node name="labl_water" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.662668, 0.199479, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "00"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.662745, 0.533333, 0, 1)
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+text = "00"

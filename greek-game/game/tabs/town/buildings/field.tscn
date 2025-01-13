@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bthv0jre71kjd"]
+
+[ext_resource type="Script" path="res://game/tabs/town/buildings/field.gd" id="1_6a8i8"]
+
+[node name="Field" type="Node2D"]
+script = ExtResource("1_6a8i8")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "pick Wheat"

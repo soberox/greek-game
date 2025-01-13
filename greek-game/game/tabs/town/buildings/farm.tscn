@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuwyhcxaedigj"]
+
+[ext_resource type="Script" path="res://game/tabs/town/buildings/farm.gd" id="1_i1odd"]
+
+[node name="Farm" type="Node2D"]
+script = ExtResource("1_i1odd")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "darn"

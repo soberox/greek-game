@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcjwp7i2ti13p"]
+
+[ext_resource type="PackedScene" uid="uid://d37udi1xyijnq" path="res://game/banner/button_back/button_back.tscn" id="1_8vy71"]
+[ext_resource type="Script" path="res://game/tabs/u_i.gd" id="1_k12u7"]
+[ext_resource type="Theme" uid="uid://gqsr6n2iru2t" path="res://main_theme.tres" id="2_v1k06"]
+[ext_resource type="PackedScene" uid="uid://bmf5jfvi16o3p" path="res://game/banner/buttons/town_but.tscn" id="3_eyqkc"]
+[ext_resource type="PackedScene" uid="uid://cfvms86kxllnw" path="res://game/banner/buttons/labor_but.tscn" id="4_4u72y"]
+[ext_resource type="PackedScene" uid="uid://sh5s4ckyjdg4" path="res://game/banner/buttons/market_but.tscn" id="5_bd07v"]
+[ext_resource type="PackedScene" uid="uid://d1cmtp8inlvif" path="res://game/banner/buttons/quest_but.tscn" id="6_cbrhh"]
+[ext_resource type="PackedScene" uid="uid://bhvi5p4ly0xs5" path="res://game/banner/buttons/prestigue_but.tscn" id="7_gbt5x"]
+[ext_resource type="PackedScene" uid="uid://clvr06vg72fpl" path="res://game/banner/buttons/levels.tscn" id="8_hg7sf"]
+[ext_resource type="PackedScene" uid="uid://dwruebh0uj8od" path="res://game/banner/button_back/top_banner.tscn" id="9_ead6h"]
+[ext_resource type="PackedScene" uid="uid://bo2evcasbgqf4" path="res://game/banner/exp_bar/bar.tscn" id="10_3tea0"]
+
+[node name="u_i" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k12u7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(971, 466)
+zoom = Vector2(2, 2)
+
+[node name="back" parent="Camera2D" instance=ExtResource("1_8vy71")]
+offset_left = -480.0
+offset_right = 481.0
+
+[node name="banner" type="GridContainer" parent="Camera2D"]
+offset_left = -478.0
+offset_top = -220.0
+offset_right = 481.0
+offset_bottom = -100.0
+
+[node name="buttons" type="HBoxContainer" parent="Camera2D/banner"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_v1k06")
+alignment = 1
+
+[node name="MarginContainer3" parent="Camera2D/banner/buttons" instance=ExtResource("3_eyqkc")]
+layout_mode = 2
+
+[node name="MarginContainer4" parent="Camera2D/banner/buttons" instance=ExtResource("4_4u72y")]
+layout_mode = 2
+
+[node name="MarginContainer2" parent="Camera2D/banner/buttons" instance=ExtResource("5_bd07v")]
+layout_mode = 2
+
+[node name="MarginContainer5" parent="Camera2D/banner/buttons" instance=ExtResource("6_cbrhh")]
+layout_mode = 2
+
+[node name="MarginContainer" parent="Camera2D/banner/buttons" instance=ExtResource("7_gbt5x")]
+layout_mode = 2
+
+[node name="levels" parent="Camera2D/banner" instance=ExtResource("8_hg7sf")]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Camera2D"]
+offset_left = -480.0
+offset_top = -271.0
+offset_right = 480.0
+offset_bottom = -231.0
+
+[node name="HBoxContainer" parent="Camera2D/PanelContainer" instance=ExtResource("9_ead6h")]
+layout_mode = 2
+
+[node name="ProgressBar" parent="Camera2D" instance=ExtResource("10_3tea0")]
+
+[connection signal="pressed" from="Camera2D/banner/buttons/MarginContainer3/Town_button" to="." method="_on_town_button_pressed"]
+[connection signal="pressed" from="Camera2D/banner/buttons/MarginContainer4/Labro_button" to="." method="_on_labro_button_pressed"]
+[connection signal="pressed" from="Camera2D/banner/buttons/MarginContainer2/Market_button" to="." method="_on_market_button_pressed"]
+[connection signal="pressed" from="Camera2D/banner/buttons/MarginContainer5/Quest_button" to="." method="_on_quest_button_pressed"]
+[connection signal="pressed" from="Camera2D/banner/buttons/MarginContainer/Prestigue_button" to="." method="_on_prestigue_button_pressed"]
+
+[editable path="Camera2D/banner/buttons/MarginContainer3"]
+[editable path="Camera2D/banner/buttons/MarginContainer4"]
+[editable path="Camera2D/banner/buttons/MarginContainer2"]
+[editable path="Camera2D/banner/buttons/MarginContainer5"]
+[editable path="Camera2D/banner/buttons/MarginContainer"]
+[editable path="Camera2D/PanelContainer/HBoxContainer"]

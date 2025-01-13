@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://f8v5saijcknn"]
+
+[ext_resource type="Script" path="res://game/tabs/town/buildings/woods.gd" id="1_kscid"]
+
+[node name="Woods" type="Node2D"]
+script = ExtResource("1_kscid")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "chop wood"
